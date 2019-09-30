@@ -34,7 +34,6 @@ class Pokemon
     pokemonhash = {id: id, name: name, type: type, db: db}
     
     newPokemon = Pokemon.new(pokemonhash)
->>>>>>> e219edaa670c4040a0d5d765ce4155fca90e740a
   end
 
 end
