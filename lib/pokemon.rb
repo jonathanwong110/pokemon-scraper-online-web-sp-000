@@ -1,9 +1,6 @@
 class Pokemon
-<<<<<<< HEAD
   attr_accessor :id, :name, :type, :db, :hp
-=======
-  attr_accessor :id, :name, :type, :db
->>>>>>> e219edaa670c4040a0d5d765ce4155fca90e740a
+
   
   @@all = []
   
@@ -20,7 +17,6 @@ class Pokemon
   end
   
   def self.find(id, db)
-<<<<<<< HEAD
     pokemon = db.execute("SELECT * FROM pokemon WHERE id=?", [id])
     new_pokemon = self.new(pokemon)
     new_pokemon.id = pokemon[0][0]
@@ -33,7 +29,6 @@ class Pokemon
   def alter_hp(id, db)
     db.execute("UPDATE pokemon SET hp = ? WHERE id = ?", [id], [self.id])
     self.hp = id
-=======
     name = db.execute("SELECT name FROM pokemon WHERE id = #{id}").flatten
     type = db.execute("SELECT type FROM pokemon WHERE id = #{id}").flatten
     pokemonhash = {id: id, name: name, type: type, db: db}
